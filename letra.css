@@ -1,0 +1,18 @@
+@font-face {
+    font-family: Formula1-Bold;
+    src: url('fonts/Formula1-Bold.otf');
+}
+@font-face {
+    font-family: Formula1-Regular;
+    src: url('fonts/Formula1-Regular.otf');
+}
+@font-face {
+    font-family: Formula1-Wide;
+    src: url('fonts/Formula1-Wide.otf');
+}
+
+.titulo {
+    background-color: red; color: white;
+    text-align: center;
+    font-family: Formula1-Regular;
+}
