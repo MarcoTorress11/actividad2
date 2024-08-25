@@ -5,33 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad 2</title>
     <link rel="stylesheet" href="espacio.css">
+    <link rel="stylesheet" href="letra.css">
 </head>
 <body>
     <header>
         <center>
-            <h1 style="background-color: red; color: white;" id="inicio">Fórmula 1</h1>
+            <h1 class="titulo_principal" style="background-color: red; color: white;" id="inicio">Fórmula 1</h1>
             <figure>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/640px-F1.svg.png" alt="logotipo formula1" height="100px">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/640px-F1.svg.png" alt="logotipo formula1" height="150px">
             </figure>
         </center>
-        <hr>
-        <ul>
-            <li><a href="index.html">Historia de la Fórmula 1</a></li><br>
-            <li><a href="funcionamiento.html">Como funciona la Fórmula 1 actual</a></li><br>
-            <li><a href="pilotos.html">Pilotos</a></li><br>
-            <li><a href="escuderias.html">Equipos</a></li><br>
-            <li id="inicio">Circuitos</li><br>
+        <hr style="height: 5px; background-color: red; border: red;"">
+        <div class="indice">
             <ul>
-                <li><a href="#c1">Circuitos actuales</a></li>
-                <li><a href="#c2">Circuitos destacados</a></li>
+                <li><a href="index.html">Historia de la Fórmula 1</a></li><br>
+                <li><a href="funcionamiento.html">Como funciona la Fórmula 1 actual</a></li><br>
+                <li><a href="pilotos.html">Pilotos</a></li><br>
+                <li><a href="escuderias.html">Equipos</a></li><br>
+                <li><a href="#c">Circuitos</a></li><br>
+                <ul>
+                    <li><a href="#c1">Circuitos actuales</a></li>
+                    <li><a href="#c2">Circuitos destacados</a></li>
+                </ul>
             </ul>
-        </ul>
+        </div>
     </header>
     <main>
+        <h2 id="c" class="titulo">Circuitos</h2>
         <section>
             <article>
-                <h4 id="c1">Circuitos actuales</h4>
-                <p>A lo largo de la historia los circuitos han ido cambiando, ya que estos se manejan bajo contrato y bajo las especificaciones de la <abbr title="Federación Internacional del Automóvilismo">FIA</abbr> en la actualidad tenemos circuitos muy variados, algunos con rectas muy largas y otros con muchas curvas, estos son los circuitos de la temporada actual:</p>
+                <h4 class="subtitulo" id="c1">Circuitos actuales</h4>
+                <div class="parrafo">
+                    <p>A lo largo de la historia los circuitos han ido cambiando, ya que estos se manejan bajo contrato y bajo las especificaciones de la <abbr title="Federación Internacional del Automóvilismo">FIA</abbr> en la actualidad tenemos circuitos muy variados, algunos con rectas muy largas y otros con muchas curvas, estos son los circuitos de la temporada actual:</p>
+                </div>
             <table>
                 <thead>
                     <tr>
@@ -343,35 +349,40 @@
             </table>
             </article>
             <br>
-            <article>
-                <h4 id="c2">Circuitos destacados</h4>
-                <center>
-                    <p>Dentro de los circuitos destacados existen varios pero aquí se destacarán principalmente 3 por su longevidad, su historia y los pilotos que han conducido en él</p>
-                    <br>
-                    <p><strong>Circuito de Monza</strong></p>
-                    <p>Es uno de los circuitos más antiguos y rápidos de la Fórmula 1. Situado en un parque en Monza, Italia, es conocido por su larga recta principal y la emblemática Parabólica. La velocidad punta es crucial en este circuito.</p>
-                    <img src="https://img.redbull.com/images/c_crop,x_0,y_0,h_2560,w_3840/c_fill,w_1200,h_800/q_auto,f_auto/redbullcom/2024/4/19/lg8v8p9cmubkjfi1gs0a/monza-mejores-circuitos" alt="Circuito de Monza" height="600">
-                </center>
-            </article>
-            <article>
-                <center>
-                    <p><strong>Circuito de Spa-Francorchamps</strong></p>
-                    <p>Ubicado en las Ardenas belgas, Spa-Francorchamps es conocido por su combinación de curvas rápidas y cambios de elevación. La curva Eau Rouge y la recta Kemmel son partes icónicas del circuito.</p>
-                    <img src="https://img.redbull.com/images/c_fill,g_auto,w_1200,h_800/q_auto,f_auto/redbullcom/2013/04/11/1331585981159_1/spa-francorchamps-en-el-bosque-de-ardenas" alt="Circuito de Bélgica" height="600">
-                </center>
-            </article>
-            <article>
-                <center>
-                    <p><strong>Circuito de Mónaco</strong></p>
-                <p>Conocido por ser estrecho, sinuoso y situado en las calles de Monte Carlo, Mónaco, este circuito urbano es famoso por sus curvas cerradas y la falta de espacio para adelantamientos. Es considerado uno de los más desafiantes y glamorosos del calendario.</p>
-                <img src="https://hotbook.mx/wp-content/uploads/2022/05/foto-2-todo-lo-que-debes-saber-sobre-el-gran-premio-de-monaco-de-f1.jpeg" alt="Circuito de Mónaco" height="600">
-                </center>
-            </article>
+
+            <h4 class="subtitulo" id="c2">Circuitos destacados</h4>
+            <div class="parrafo">
+                <article>
+                        <p>Dentro de los circuitos destacados existen varios pero aquí se destacarán principalmente 3 por su longevidad, su historia y los pilotos que han conducido en él</p>
+                        <br>
+                        <p style="font-size: 20px;"><strong>Circuito de Monza</strong></p>
+                        <p>Es uno de los circuitos más antiguos y rápidos de la Fórmula 1. Situado en un parque en Monza, Italia, es conocido por su larga recta principal y la emblemática Parabólica. La velocidad punta es crucial en este circuito.</p>
+                        <center><img src="https://img.redbull.com/images/c_crop,x_0,y_0,h_2560,w_3840/c_fill,w_1200,h_800/q_auto,f_auto/redbullcom/2024/4/19/lg8v8p9cmubkjfi1gs0a/monza-mejores-circuitos" alt="Circuito de Monza" height="600"></center>
+                </article>
+            </div>
+            <br>
+
+            <div class="parrafo">
+                <article>
+                        <p style="font-size: 20px;"><strong>Circuito de Spa-Francorchamps</strong></p>
+                        <p>Ubicado en las Ardenas belgas, Spa-Francorchamps es conocido por su combinación de curvas rápidas y cambios de elevación. La curva Eau Rouge y la recta Kemmel son partes icónicas del circuito.</p>
+                        <center><img src="https://img.redbull.com/images/c_fill,g_auto,w_1200,h_800/q_auto,f_auto/redbullcom/2013/04/11/1331585981159_1/spa-francorchamps-en-el-bosque-de-ardenas" alt="Circuito de Bélgica" height="600"></center>
+                </article>
+            </div>
+            <br>
+
+            <div class="parrafo">
+                <article>
+                        <p style="font-size: 20px;"><strong>Circuito de Mónaco</strong></p>
+                    <p>Conocido por ser estrecho, sinuoso y situado en las calles de Monte Carlo, Mónaco, este circuito urbano es famoso por sus curvas cerradas y la falta de espacio para adelantamientos. Es considerado uno de los más desafiantes y glamorosos del calendario.</p>
+                    <center><img src="https://hotbook.mx/wp-content/uploads/2022/05/foto-2-todo-lo-que-debes-saber-sobre-el-gran-premio-de-monaco-de-f1.jpeg" alt="Circuito de Mónaco" width="900"></center>
+                </article>
+            </div>
         </section>
     </main>
     <br>
     <hr>
-    <footer>
+    <footer class="abajo">
         <a href="#inicio">👉Click aquí para regresar al inicio de la página</a>
         <address>
             <p>Desarrollado por MSTS</p>
