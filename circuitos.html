@@ -6,30 +6,59 @@
     <title>Actividad 2</title>
     <link rel="stylesheet" href="espacio.css">
     <link rel="stylesheet" href="letra.css">
+    <style>
+        table {
+                border: none;
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            td { 
+                padding: 5px 10px;
+                text-align: center;
+            }
+    </style>
 </head>
 <body>
-    <header>
-        <center>
-            <h1 class="titulo_principal" style="background-color: red; color: white;" id="inicio">Fórmula 1</h1>
-            <figure>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/640px-F1.svg.png" alt="logotipo formula1" height="150px">
-            </figure>
-        </center>
-        <hr style="height: 5px; background-color: red; border: red;"">
-        <div class="indice">
-            <ul>
-                <li><a href="index.html">Historia de la Fórmula 1</a></li><br>
-                <li><a href="funcionamiento.html">Como funciona la Fórmula 1 actual</a></li><br>
-                <li><a href="pilotos.html">Pilotos</a></li><br>
-                <li><a href="escuderias.html">Equipos</a></li><br>
-                <li><a href="#c">Circuitos</a></li><br>
-                <ul>
-                    <li><a href="#c1">Circuitos actuales</a></li>
-                    <li><a href="#c2">Circuitos destacados</a></li>
-                </ul>
+<header style="display: flex; align-items: center; justify-content: space-between; padding: 10px; background-color: rgba(255, 0, 0, 0.683);">
+    <h1 class="titulo_principal" style="color: whitesmoke; margin: 0;" id="inicio">Fórmula 1</h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/640px-F1.svg.png" alt="logotipo formula1" style="height: 80px; width: auto;">
+</header>
+
+<nav style="background-color: red;">
+    <ul style="list-style: none; padding: 0; display: flex; justify-content: space-around; color: white; align-items: center;">
+        <li><a class="parrafo" href="index.html" style="color: white; text-decoration: none;">Historia de la Fórmula 1</a></li>
+        <li><a class="parrafo" href="funcionamiento.html" style="color: white; text-decoration: none;">Como funciona la Fórmula 1 actual</a></li>
+        <li><a class="parrafo" href="pilotos.html" style="color: white; text-decoration: none;">Pilotos</a></li>
+        <li><a class="parrafo" href="escuderias.html" style="color: white; text-decoration: none;">Equipos</a></li>
+        <li style="position: relative;">
+            <a class="parrafo" href="#c" style="color: white; text-decoration: none;">Circuitos</a>
+            <ul class="parrafo" style="position: absolute; top: 100%; left: 0; background-color: white; list-style: none; padding: 0; display: none;">
+                <li><a href="#c1" style="color: red; text-decoration: none;">Circuitos actuales</a></li>
+                <li><a href="#c2" style="color: red; text-decoration: none;">Circuitos destacados</a></li>
             </ul>
-        </div>
-    </header>
+        </li>
+    </ul>
+</nav>
+
+<hr style="height: 5px; background-color: red; border: none;">
+
+<script>
+    document.querySelector('li a[href="#c"]').addEventListener('mouseenter', function() {
+        document.querySelector('li a[href="#c"] + ul').style.display = 'block';
+    });
+    document.querySelector('li a[href="#c"]').addEventListener('mouseleave', function() {
+        document.querySelector('li a[href="#c"] + ul').style.display = 'none';
+    });
+
+    document.querySelector('li a[href="#c"] + ul').addEventListener('mouseenter', function() {
+        this.style.display = 'block';
+    });
+    document.querySelector('li a[href="#c"] + ul').addEventListener('mouseleave', function() {
+        this.style.display = 'none';
+    });
+</script>
+
     <main>
         <h2 id="c" class="titulo">Circuitos</h2>
         <section>
@@ -358,6 +387,12 @@
                         <p style="font-size: 20px;"><strong>Circuito de Monza</strong></p>
                         <p>Es uno de los circuitos más antiguos y rápidos de la Fórmula 1. Situado en un parque en Monza, Italia, es conocido por su larga recta principal y la emblemática Parabólica. La velocidad punta es crucial en este circuito.</p>
                         <center><img src="https://img.redbull.com/images/c_crop,x_0,y_0,h_2560,w_3840/c_fill,w_1200,h_800/q_auto,f_auto/redbullcom/2024/4/19/lg8v8p9cmubkjfi1gs0a/monza-mejores-circuitos" alt="Circuito de Monza" height="600"></center>
+                        <center><audio controls>
+                            <source src="audios/1996SchumacherWinsMonza.mp3" type="audio/mpeg">
+                            Tu navegador no soporta la reproducción de audio.
+                        </audio>
+                        <p><i>Audio de carrera de Monza 1996 donde Michael Schumacher ganó</i></p>
+                        </center>
                 </article>
             </div>
             <br>

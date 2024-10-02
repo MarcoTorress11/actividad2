@@ -7,31 +7,47 @@
     <link rel="stylesheet" href="letra.css">
 </head>
 <body>
-    <header>
-        <center>
-            <h1 class="titulo_principal" style="background-color: red; color: white;" id="inicio">Fórmula 1</h1>
-            <figure>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/640px-F1.svg.png" alt="logotipo formula1" height="150px">
-            </figure>
-        </center>
-        <hr style="height: 5px; background-color: red; border: red;"">
-        <div class="indice">
-            <ul>
-                <li><a href="index.html">Historia de la Fórmula 1</a></li><br>
-                <li><a href="#func">Como funciona la Fórmula 1 actual</a></li>
-                <ul>
-                    <li><a href="#func1">Temporada</a></li>
-                    <li><a href="#func2">Equipos y Pilotos</a></li>
-                    <li><a href="#func3">Formato de carreras</a></li>
-                    <li><a href="#func4">Regulaciones</a></li>
-                    <li><a href="#func5">Otros aspectos a tomar en cuenta</a></li>
-                </ul><br>
-                <li><a href="pilotos.html">Pilotos</a></li><br>
-                <li><a href="escuderias.html">Equipos</a></li><br>
-                <li><a href="circuitos.html">Circuitos</a></li><br>
+<header style="display: flex; align-items: center; justify-content: space-between; padding: 10px; background-color: rgba(255, 0, 0, 0.683);">
+    <h1 class="titulo_principal" style="color: whitesmoke; margin: 0;" id="inicio">Fórmula 1</h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/640px-F1.svg.png" alt="logotipo formula1" style="height: 80px; width: auto;">
+</header>
+
+<nav style="background-color: red;">
+    <ul style="list-style: none; padding: 0; display: flex; justify-content: space-around; color: white; align-items: center;">
+        <li><a class="parrafo" href="index.html" style="color: white; text-decoration: none;">Historia de la Fórmula 1</a></li>
+        <li style="position: relative;">
+            <a class="parrafo" href="#func" style="color: white; text-decoration: none;">Como funciona la Fórmula 1 actual</a>
+            <ul class="parrafo" style="position: absolute; top: 100%; left: 0; background-color: white; list-style: none; padding: 0; display: none;">
+                <li><a href="#func1" style="color: red; text-decoration: none;">Temporada</a></li>
+                <li><a href="#func2" style="color: red; text-decoration: none;">Equipos y Pilotos</a></li>
+                <li><a href="#func3" style="color: red; text-decoration: none;">Formato de carreras</a></li>
+                <li><a href="#func4" style="color: red; text-decoration: none;">Regulaciones</a></li>
+                <li><a href="#func5" style="color: red; text-decoration: none;">Otros aspectos a tomar en cuenta</a></li>
             </ul>
-        </div>
-    </header>
+        </li>
+        <li><a class="parrafo" href="pilotos.html" style="color: white; text-decoration: none;">Pilotos</a></li>
+        <li><a class="parrafo" href="escuderias.html" style="color: white; text-decoration: none;">Equipos</a></li>
+        <li><a class="parrafo" href="circuitos.html" style="color: white; text-decoration: none;">Circuitos</a></li>
+    </ul>
+</nav>
+
+<hr style="height: 5px; background-color: red; border: none;">
+
+<script>
+    document.querySelector('li a[href="#func"]').addEventListener('mouseenter', function() {
+        document.querySelector('li a[href="#func"] + ul').style.display = 'block';
+    });
+    document.querySelector('li a[href="#func"]').addEventListener('mouseleave', function() {
+        document.querySelector('li a[href="#func"] + ul').style.display = 'none';
+    });
+
+    document.querySelector('li a[href="#func"] + ul').addEventListener('mouseenter', function() {
+        this.style.display = 'block';
+    });
+    document.querySelector('li a[href="#func"] + ul').addEventListener('mouseleave', function() {
+        this.style.display = 'none';
+    });
+</script>
 
     <main>
         <h2 id="func" class="titulo">Como funciona la Fórmula 1 actual</h2>
@@ -131,7 +147,36 @@
                 </ul>
             </article>
         </section>
+
+        <br>
+
+        <section>
+            <h4 class="parrafo">Tienes alguna otra duda?, Contáctanos</h4>
+            <center>
+                <form action="!!!basededatos!!!" method="post" style="text-align: justify; line-height: 1.5; max-width: 800px; margin: auto;"><br>
+                    
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" id="nombre" name="nombre" maxlength="60" required><br><br>
+            
+                    <label for="correo">Correo Electrónico:</label><br>
+                    <input type="email" id="correo" name="correo" maxlength="60" required><br><br>
+            
+                    <label for="duda">Duda:</label><br>
+                    <input type="text" id="duda" name="duda" maxlength="300" required><br><br>
+                    
+                    <label for="duda">Fecha:</label><br>
+                    <input type="datetime-local" id="fecha" name="fecha" required><br><br>
+            
+                    <label for="informacion">¿Te gustaría que te enviáramos información acerca de F1?</label>
+                    <input type="checkbox" id="informacion" name="informacion"><br><br>
+            
+                    <input type="submit" value="Enviar">
+                </form>
+            </center>
+        </section>
+    </body>
     </main>
+    
     <br>
     <hr>
     <footer class="abajo">

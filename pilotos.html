@@ -7,28 +7,44 @@
     <link rel="stylesheet" href="letra.css">
 </head>
 <body>
-    <header>
-        <center>
-            <h1 class="titulo_principal" style="background-color: red; color: white;" id="inicio">Fórmula 1</h1>
-            <figure>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/640px-F1.svg.png" alt="logotipo formula1" height="150px">
-            </figure>
-        </center>
-        <hr style="height: 5px; background-color: red; border: red;"">
-        <div class="indice">
-            <ul>
-                <li><a href="index.html">Historia de la Fórmula 1</a></li><br>
-                <li><a href="funcionamiento.html">Como funciona la Fórmula 1 actual</a></li><br>
-                <li><a href="#pil">Pilotos</a></li>
-                <ul>
-                    <li><a href="#pil1">Pilotos actuales</a></li>
-                    <li><a href="#pil2">Pilotos históricos</a></li>
-                </ul><br>
-                <li><a href="escuderias.html">Equipos</a></li><br>
-                <li><a href="circuitos.html">Circuitos</a></li><br>
+<header style="display: flex; align-items: center; justify-content: space-between; padding: 10px; background-color: rgba(255, 0, 0, 0.683);">
+    <h1 class="titulo_principal" style="color: whitesmoke; margin: 0;" id="inicio">Fórmula 1</h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/640px-F1.svg.png" alt="logotipo formula1" style="height: 80px; width: auto;">
+</header>
+
+<nav style="background-color: red;">
+    <ul style="list-style: none; padding: 0; display: flex; justify-content: space-around; color: white; align-items: center;">
+        <li><a class="parrafo" href="index.html" style="color: white; text-decoration: none;">Historia de la Fórmula 1</a></li>
+        <li><a class="parrafo" href="funcionamiento.html" style="color: white; text-decoration: none;">Como funciona la Fórmula 1 actual</a></li>
+        <li style="position: relative;">
+            <a class="parrafo" href="#pil" style="color: white; text-decoration: none;">Pilotos</a>
+            <ul class="parrafo" style="position: absolute; top: 100%; left: 0; background-color: white; list-style: none; padding: 0; display: none;">
+                <li><a href="#pil1" style="color: red; text-decoration: none;">Pilotos actuales</a></li>
+                <li><a href="#pil2" style="color: red; text-decoration: none;">Pilotos históricos</a></li>
             </ul>
-        </div>
-    </header>
+        </li>
+        <li><a class="parrafo" href="escuderias.html" style="color: white; text-decoration: none;">Equipos</a></li>
+        <li><a class="parrafo" href="circuitos.html" style="color: white; text-decoration: none;">Circuitos</a></li>
+    </ul>
+</nav>
+
+<hr style="height: 5px; background-color: red; border: none;">
+
+<script>
+    document.querySelector('li a[href="#pil"]').addEventListener('mouseenter', function() {
+        document.querySelector('li a[href="#pil"] + ul').style.display = 'block';
+    });
+    document.querySelector('li a[href="#pil"]').addEventListener('mouseleave', function() {
+        document.querySelector('li a[href="#pil"] + ul').style.display = 'none';
+    });
+
+    document.querySelector('li a[href="#pil"] + ul').addEventListener('mouseenter', function() {
+        this.style.display = 'block';
+    });
+    document.querySelector('li a[href="#pil"] + ul').addEventListener('mouseleave', function() {
+        this.style.display = 'none';
+    });
+</script>
 
     <main>
         <h2 id="pil" class="titulo">Pilotos</h2>
