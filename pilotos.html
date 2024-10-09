@@ -31,18 +31,14 @@
 <hr style="height: 5px; background-color: red; border: none;">
 
 <script>
-    document.querySelector('li a[href="#pil"]').addEventListener('mouseenter', function() {
-        document.querySelector('li a[href="#pil"] + ul').style.display = 'block';
-    });
-    document.querySelector('li a[href="#pil"]').addEventListener('mouseleave', function() {
-        document.querySelector('li a[href="#pil"] + ul').style.display = 'none';
-    });
-
-    document.querySelector('li a[href="#pil"] + ul').addEventListener('mouseenter', function() {
-        this.style.display = 'block';
-    });
-    document.querySelector('li a[href="#pil"] + ul').addEventListener('mouseleave', function() {
-        this.style.display = 'none';
+    document.querySelector('li a[href="#pil"]').addEventListener('click', function(event) {
+        event.preventDefault(); 
+        const submenu = document.querySelector('li a[href="#pil"] + ul');
+        if (submenu.style.display === 'block') {
+            submenu.style.display = 'none';
+        } else {
+            submenu.style.display = 'block';
+        }
     });
 </script>
 

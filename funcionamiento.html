@@ -34,18 +34,14 @@
 <hr style="height: 5px; background-color: red; border: none;">
 
 <script>
-    document.querySelector('li a[href="#func"]').addEventListener('mouseenter', function() {
-        document.querySelector('li a[href="#func"] + ul').style.display = 'block';
-    });
-    document.querySelector('li a[href="#func"]').addEventListener('mouseleave', function() {
-        document.querySelector('li a[href="#func"] + ul').style.display = 'none';
-    });
-
-    document.querySelector('li a[href="#func"] + ul').addEventListener('mouseenter', function() {
-        this.style.display = 'block';
-    });
-    document.querySelector('li a[href="#func"] + ul').addEventListener('mouseleave', function() {
-        this.style.display = 'none';
+    document.querySelector('li a[href="#func"]').addEventListener('click', function(event) {
+        event.preventDefault(); 
+        const submenu = document.querySelector('li a[href="#func"] + ul');
+        if (submenu.style.display === 'block') {
+            submenu.style.display = 'none';
+        } else {
+            submenu.style.display = 'block';
+        }
     });
 </script>
 

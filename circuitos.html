@@ -44,18 +44,14 @@
 <hr style="height: 5px; background-color: red; border: none;">
 
 <script>
-    document.querySelector('li a[href="#c"]').addEventListener('mouseenter', function() {
-        document.querySelector('li a[href="#c"] + ul').style.display = 'block';
-    });
-    document.querySelector('li a[href="#c"]').addEventListener('mouseleave', function() {
-        document.querySelector('li a[href="#c"] + ul').style.display = 'none';
-    });
-
-    document.querySelector('li a[href="#c"] + ul').addEventListener('mouseenter', function() {
-        this.style.display = 'block';
-    });
-    document.querySelector('li a[href="#c"] + ul').addEventListener('mouseleave', function() {
-        this.style.display = 'none';
+    document.querySelector('li a[href="#c"]').addEventListener('click', function(event) {
+        event.preventDefault(); 
+        const submenu = document.querySelector('li a[href="#c"] + ul');
+        if (submenu.style.display === 'block') {
+            submenu.style.display = 'none';
+        } else {
+            submenu.style.display = 'block';
+        }
     });
 </script>
 

@@ -32,18 +32,14 @@
 <hr style="height: 5px; background-color: red; border: none;">
 
 <script>
-    document.querySelector('li a[href="#historia"]').addEventListener('mouseenter', function() {
-        document.querySelector('li a[href="#historia"] + ul').style.display = 'block';
-    });
-    document.querySelector('li a[href="#historia"]').addEventListener('mouseleave', function() {
-        document.querySelector('li a[href="#historia"] + ul').style.display = 'none';
-    });
-
-    document.querySelector('li a[href="#historia"] + ul').addEventListener('mouseenter', function() {
-        this.style.display = 'block';
-    });
-    document.querySelector('li a[href="#historia"] + ul').addEventListener('mouseleave', function() {
-        this.style.display = 'none';
+    document.querySelector('li a[href="#historia"]').addEventListener('click', function(event) {
+        event.preventDefault(); 
+        const submenu = document.querySelector('li a[href="#historia"] + ul');
+        if (submenu.style.display === 'block') {
+            submenu.style.display = 'none';
+        } else {
+            submenu.style.display = 'block';
+        }
     });
 </script>
 

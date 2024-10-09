@@ -30,18 +30,14 @@
 <hr style="height: 5px; background-color: red; border: none;">
 
 <script>
-    document.querySelector('li a[href="#eq"]').addEventListener('mouseenter', function() {
-        document.querySelector('li a[href="#eq"] + ul').style.display = 'block';
-    });
-    document.querySelector('li a[href="#eq"]').addEventListener('mouseleave', function() {
-        document.querySelector('li a[href="#eq"] + ul').style.display = 'none';
-    });
-
-    document.querySelector('li a[href="#eq"] + ul').addEventListener('mouseenter', function() {
-        this.style.display = 'block';
-    });
-    document.querySelector('li a[href="#eq"] + ul').addEventListener('mouseleave', function() {
-        this.style.display = 'none';
+    document.querySelector('li a[href="#eq"]').addEventListener('click', function(event) {
+        event.preventDefault(); 
+        const submenu = document.querySelector('li a[href="#eq"] + ul');
+        if (submenu.style.display === 'block') {
+            submenu.style.display = 'none';
+        } else {
+            submenu.style.display = 'block';
+        }
     });
 </script>
     
