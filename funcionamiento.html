@@ -45,6 +45,7 @@
     });
 </script>
 
+
     <main>
         <h2 id="func" class="titulo">Como funciona la Fórmula 1 actual</h2>
         <section>
@@ -149,8 +150,7 @@
         <section>
             <h4 class="parrafo">Tienes alguna otra duda?, Contáctanos</h4>
             <center>
-                <form action="!!!basededatos!!!" method="post" style="text-align: justify; line-height: 1.5; max-width: 800px; margin: auto;"><br>
-                    
+                <form id="formContacto" style="text-align: justify; line-height: 1.5; max-width: 800px; margin: auto;">
                     <label for="nombre">Nombre:</label><br>
                     <input type="text" id="nombre" name="nombre" maxlength="60" required><br><br>
             
@@ -173,6 +173,19 @@
     </body>
     </main>
     
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+emailjs.init({
+    publicKey: "FLQ7IJgInhGy96MK5",
+});
+})();
+</script>
+
+<script src="formulario.js"></script>
+
     <br>
     <hr>
     <footer class="abajo">
